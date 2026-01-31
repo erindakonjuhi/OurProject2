@@ -1,0 +1,442 @@
+/* Dark Red and White Color Scheme */
+:root {
+    --dark-red: #8B0000;
+    --light-red: #C41E3A;
+    --white: #FFFFFF;
+    --light-gray: #F5F5F5;
+    --dark-gray: #333333;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--white);
+    color: var(--dark-gray);
+    line-height: 1.6;
+}
+
+/* Header and Navigation */
+header {
+    background-color: var(--dark-red);
+    color: var(--white);
+    padding: 20px 0;
+    box-shadow: 0 2px 5px rgba(139, 0, 0, 0.1);
+}
+
+nav {
+    background-color: var(--light-red);
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 0;
+    flex-wrap: wrap;
+}
+
+nav li {
+    margin: 0;
+}
+
+nav a {
+    color: var(--white);
+    text-decoration: none;
+    padding: 10px 20px;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+    background-color: var(--dark-red);
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+    color: var(--white);
+}
+
+/* Unified Button Styling */
+.btn, 
+button[type="submit"], 
+button[type="button"],
+input[type="button"] {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #8B0000; /* Dark red */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    text-align: center;
+}
+
+.btn:hover,
+button[type="submit"]:hover,
+button[type="button"]:hover,
+input[type="button"]:hover {
+    background-color: #A52A2A; /* Lighter dark red on hover */
+}
+
+/* Small button variant */
+.btn-sm {
+    padding: 8px 16px;
+    font-size: 13px;
+}
+
+/* Secondary button */
+.btn-secondary {
+    background-color: #666;
+}
+
+.btn-secondary:hover {
+    background-color: #777;
+}
+
+/* Buttons */
+.btn {
+    background-color: var(--dark-red);
+    color: var(--white);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+}
+
+.btn:hover {
+    background-color: var(--light-red);
+}
+
+.btn-white {
+    background-color: var(--white);
+    color: var(--dark-red);
+    border: 2px solid var(--dark-red);
+}
+
+.btn-white:hover {
+    background-color: var(--light-gray);
+}
+
+/* Forms */
+input, textarea, select {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 2px solid var(--light-red);
+    border-radius: 5px;
+    font-family: inherit;
+    font-size: 16px;
+}
+
+input:focus, textarea:focus, select:focus {
+    outline: none;
+    border-color: var(--dark-red);
+    box-shadow: 0 0 5px rgba(139, 0, 0, 0.3);
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--dark-red);
+    font-weight: 600;
+}
+
+/* Cards and Containers */
+.card {
+    background-color: var(--white);
+    border: 2px solid var(--light-red);
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 10px rgba(139, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 20px rgba(139, 0, 0, 0.2);
+}
+
+/* Movies Grid - Horizontal Layout */
+.movies-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    margin: 30px 0;
+}
+
+.movie-card {
+    background: #f5f5f5;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.movie-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.movie-poster {
+    width: 100%;
+    height: 280px;
+    overflow: hidden;
+    background: #ddd;
+}
+
+.movie-poster img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.no-image {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #ccc;
+    color: #666;
+    font-weight: bold;
+}
+
+.movie-info {
+    padding: 15px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.movie-info h3 {
+    margin: 0 0 10px 0;
+    font-size: 16px;
+    color: #333;
+}
+
+.movie-info p {
+    margin: 5px 0;
+    font-size: 13px;
+    color: #666;
+}
+
+.movie-info .director,
+.movie-info .year {
+    font-size: 12px;
+}
+
+.movie-info .rating {
+    margin-top: auto;
+    font-weight: bold;
+    color: #8B0000;
+}
+
+.movie-info .btn {
+    margin-top: 10px;
+    width: 100%;
+    text-align: center;
+}
+
+/* Pagination */
+.pagination {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 40px 0;
+    flex-wrap: wrap;
+}
+
+.page-current {
+    padding: 10px 15px;
+    background-color: #8B0000;
+    color: white;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+    color: var(--dark-red);
+    margin-bottom: 15px;
+}
+
+h1 {
+    font-size: 32px;
+    border-bottom: 3px solid var(--dark-red);
+    padding-bottom: 10px;
+}
+
+h2 {
+    font-size: 24px;
+}
+
+h3 {
+    font-size: 20px;
+}
+
+/* Tables */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+thead {
+    background-color: var(--dark-red);
+    color: var(--white);
+}
+
+th {
+    padding: 15px;
+    text-align: left;
+    font-weight: 600;
+}
+
+td {
+    padding: 12px 15px;
+    border-bottom: 1px solid var(--light-red);
+}
+
+tbody tr:hover {
+    background-color: var(--light-gray);
+}
+
+/* Footer */
+footer {
+    background-color: var(--dark-red);
+    color: var(--white);
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+footer a {
+    color: var(--light-gray);
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Badges and Alerts */
+.badge {
+    display: inline-block;
+    padding: 5px 10px;
+    background-color: var(--dark-red);
+    color: var(--white);
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.alert {
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.alert-success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.alert-error {
+    background-color: #f8d7da;
+    color: var(--dark-red);
+    border: 1px solid var(--light-red);
+}
+
+.alert-info {
+    background-color: #d1ecf1;
+    color: #0c5460;
+    border: 1px solid #bee5eb;
+}
+
+/* Links */
+a {
+    color: var(--dark-red);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--light-red);
+    text-decoration: underline;
+}
+
+/* Containers and Spacing */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    width: 100%;
+}
+
+section {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+section .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.section {
+    padding: 40px 0;
+    text-align: center;
+    width: 100%;
+}
+
+.section-red {
+    background-color: var(--dark-red);
+    color: var(--white);
+}
+
+.section-red h2, .section-red h3 {
+    color: var(--white);
+    border-bottom-color: var(--white);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 24px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    .container {
+        padding: 0 15px;
+    }
+
+    nav a {
+        padding: 8px 15px;
+        font-size: 14px;
+    }
+}
