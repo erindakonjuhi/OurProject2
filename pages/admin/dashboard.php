@@ -295,3 +295,7 @@ if ($action === 'edit-movie' && isset($_GET['id'])) {
     <script src="javascripts/main.js"></script>
 </body>
 </html>
+
+<?php
+echo "Merisa ka punuar këtu!";
+?>
