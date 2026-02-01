@@ -72,3 +72,7 @@ $isAdmin = isset($_SESSION['role']) && $_SESSION['role'] === 'admin';
     <script src="javascripts/main.js"></script>
 </body>
 </html>
+
+<?php
+echo "Merisa ka punuar këtu!";
+?>
